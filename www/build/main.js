@@ -39,7 +39,7 @@ webpackEmptyAsyncContext.id = 200;
 
 var map = {
 	"../pages/forecast/forecast.module": [
-		794,
+		795,
 		0
 	]
 };
@@ -81,16 +81,15 @@ var HomePage = /** @class */ (function () {
     // editSearch;
     function HomePage(navCtrl) {
         this.navCtrl = navCtrl;
-        this.VERSION = __webpack_require__(796).version;
+        this.VERSION = __webpack_require__(794).version;
     }
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-home',template:/*ion-inline-start:"/Users/keology/Documents/git/weather-ui/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Catalyst Weather Machine <small>v{{VERSION}}</small>\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n  <p>Welcome to the Catalyst Weather machine! Enter a numeric zip code or city into the search box below to sample the weather.</p>\n\n  <search-bar></search-bar>\n  \n</ion-content>\n\n  <!-- Moved this to a component. See SearchBarComponent -->\n\n  <!-- <ion-item>\n    <ion-label floating>\n      City/Zip\n    </ion-label>\n    <ion-input placeholder="Enter a city or zip" name="editSearch" [(ngModel)]="editSearch"></ion-input>\n  </ion-item>\n  <button ion-button (click)="search($event)">Search</button> -->\n'/*ion-inline-end:"/Users/keology/Documents/git/weather-ui/src/pages/home/home.html"*/
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]) === "function" && _a || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]])
     ], HomePage);
     return HomePage;
-    var _a;
 }());
 
 //# sourceMappingURL=home.js.map
@@ -694,7 +693,7 @@ var MyApp = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 796:
+/***/ 794:
 /***/ (function(module, exports) {
 
 module.exports = {"name":"weather-ui","version":"1.0.1","author":"Kevin Salerno","homepage":"https://linkedin.com/in/kevinsalerno/","private":true,"scripts":{"start":"ionic-app-scripts serve","clean":"ionic-app-scripts clean","build":"ionic-app-scripts build","lint":"ionic-app-scripts lint"},"dependencies":{"@angular/animations":"5.2.11","@angular/common":"5.2.11","@angular/compiler":"5.2.11","@angular/compiler-cli":"5.2.11","@angular/core":"5.2.11","@angular/forms":"5.2.11","@angular/http":"5.2.11","@angular/platform-browser":"5.2.11","@angular/platform-browser-dynamic":"5.2.11","@ionic-native/core":"~4.11.0","@ionic-native/splash-screen":"~4.11.0","@ionic-native/status-bar":"~4.11.0","@ionic/storage":"2.1.3","d3":"^5.5.0","ionic-angular":"3.9.2","ionicons":"3.0.0","rxjs":"5.5.11","sw-toolbox":"3.6.0","uuid":"^3.3.2","zone.js":"0.8.26"},"devDependencies":{"@ionic/app-scripts":"3.1.11","@types/d3":"^5.0.0","typescript":"~2.6.2"},"description":"A sample Weather UI project to demonstrate graphing and API utilization"}
