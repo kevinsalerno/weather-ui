@@ -82,6 +82,7 @@ var ForecastPage = /** @class */ (function () {
     }
     ForecastPage.prototype.ionViewDidLoad = function () {
     };
+    // use storage service to load cache key
     ForecastPage.prototype.loadCache = function (key) {
         console.log("getting cache for key " + key);
         var cached = this.storage.get(key);
@@ -96,9 +97,11 @@ var ForecastPage = /** @class */ (function () {
         this.data = data;
         this.dates = this.getWeatherByDate(data.list);
     };
+    // helper template function
     ForecastPage.prototype.getObjKeys = function (obj) {
         return Object.keys(obj);
     };
+    // sort hourly weather data into like-dates
     ForecastPage.prototype.getWeatherByDate = function (list) {
         console.log('get item by date');
         var dates = {};
@@ -113,24 +116,30 @@ var ForecastPage = /** @class */ (function () {
         });
         return dates;
     };
+    // Fire each time the view becomes active in the DOM
+    // Had some issues with Ionic routing and browser here - ideally would use Angular 5+ router events
     ForecastPage.prototype.ionViewWillEnter = function () {
         var _this = this;
         console.log('SEARCH');
         console.log(this.navParams.data);
         this.search = this.navParams.get('search');
+        // get cache based on search string
         var cached = this.loadCache(this.search);
         if (cached) {
+            // if cache exists, skip the fetch and set the data
             this.setForecastData(cached);
         }
         else {
+            // pull params out of search string (is it zip or city?)
             var params = (Object(__WEBPACK_IMPORTED_MODULE_3__shared__["c" /* isNumeric */])(this.search) ? { zip: this.search } : { q: this.search });
             // using nav parameters (old style)
             // this.api.fetchForecast(this.navParams.data).subscribe(res => {
+            // fetch forecast with params object
             this.api.fetchForecast(params).subscribe(function (res) {
                 console.log(res);
                 if (res.cod === '200') {
+                    // set data/save cache only if sucessful fetch
                     _this.setForecastData(res);
-                    // this.data = res;
                     _this.storage.set(_this.search, JSON.stringify(Object.assign({}, res, { fetchedAt: new Date() })));
                 }
             }, function (err) {

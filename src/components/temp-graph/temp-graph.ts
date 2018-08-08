@@ -34,11 +34,11 @@ export class TempGraphComponent {
   }
 
   ngOnInit() {
+    // generate a random UUID to use as a binding ID for the graph SVG object
     this.random = uuid();
-    // Graph the graph SVG from dom
-    this.graph = d3.select(`#graph-${this.random}`);
   }
 
+  // listen for changes to the input data field
   ngOnChanges(changes: { [data: string]: SimpleChange }) {
     console.log(changes);
     console.log(this.data);
@@ -50,6 +50,7 @@ export class TempGraphComponent {
     }
   }
 
+  // get our relevant data into x,y fashion
   mapGraphData(data) {
     let result = data.map(d => {
       return { x: d.dt, y: d.main.temp }
@@ -59,7 +60,9 @@ export class TempGraphComponent {
     return result;
   }
 
+  // prepare the SVG graph based on relevant data
   prepGraph() {
+    // Grab the graph SVG from DOM
     this.graph = d3.select(`#graph-${this.random}`);
 
     var WIDTH = window.innerWidth;
@@ -70,6 +73,8 @@ export class TempGraphComponent {
       bottom: 20,
       left: 50
     };
+
+    // get range relevancy w data
     this.xRange = d3.scaleLinear().range([MARGINS.left, WIDTH - MARGINS.right]).domain([d3.min(this.graphData, function (d) {
       return d.x;
     }), d3.max(this.graphData, function (d) {
@@ -80,8 +85,12 @@ export class TempGraphComponent {
     }), d3.max(this.graphData, function (d) {
       return d.y;
     })]);
+
+    // set the axis based on ranges
     this.xAxis = d3.axisBottom(this.xRange).tickSize(10).tickFormat((d: any) => { return d.x; });
     this.yAxis = d3.axisLeft(this.yRange);
+
+    // draw the axis
     this.graph.append('svg:g')
       .attr('class', 'x axis')
       .attr('transform', 'translate(0,' + (HEIGHT - MARGINS.bottom) + ')')
@@ -93,7 +102,7 @@ export class TempGraphComponent {
       .call(this.yAxis);
   }
 
-
+  // convert the line data into relevant points for the SVG graph
   getLineData(data) {
     let result = data.map(d => {
       return [this.xRange(d.x), this.yRange(d.y)]
@@ -104,6 +113,7 @@ export class TempGraphComponent {
   }
 
 
+  // append the lines to DOM
   drawGraphLines() {
     let lineGen = d3.line();
 
