@@ -1,0 +1,5 @@
+<!-- Modular Day component to reuse for each daily forecast -->
+<h1>{{day[0].dt_txt | date:'shortDate'}}</h1>
+<ion-row *ngFor="let hour of day">
+    <hour-forecast [hour]="hour"></hour-forecast>
+</ion-row>

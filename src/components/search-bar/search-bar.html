@@ -1,0 +1,9 @@
+<form>
+<ion-item>
+  <ion-label stacked for="editSearch">
+    City/Zip
+  </ion-label>
+  <ion-input placeholder="Enter a city or zip" name="editSearch" [(ngModel)]="editSearch"></ion-input>
+</ion-item>
+<button ion-button (click)="search($event)">Search</button>
+</form>

@@ -1,0 +1,34 @@
+<!--
+  Generated template for the ForecastPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{ (data.city) ? data.city.name : ''}} Forecast</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <search-bar></search-bar>
+
+  <temp-graph [data]="data.list"></temp-graph>
+
+  <ion-grid>
+    <ion-row offset-1>
+      <ion-col *ngFor="let day of getObjKeys(dates)" col-2>
+        <day-forecast [day]="dates[day]"></day-forecast>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+<!-- 
+  <ul *ngIf="data.list">
+    <li *ngFor="let item of data.list">
+      {{item | json}}
+    </li>
+  </ul> -->
+</ion-content>
