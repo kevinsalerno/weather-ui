@@ -4,12 +4,6 @@ import { HttpProvider } from '../../providers/http/http';
 import { isNumeric } from '../../shared';
 import { StorageProvider } from '../../providers/storage/storage';
 
-/**
- * Generated class for the ForecastPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage({
   segment: 'forecast/:search' // use a segment to pull URL relevant data eg. app.com/#/forecast/Denver
