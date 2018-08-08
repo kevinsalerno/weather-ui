@@ -1,6 +1,6 @@
 webpackJsonp([0],{
 
-/***/ 791:
+/***/ 794:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ForecastPageModule", function() { return ForecastPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(57);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__forecast__ = __webpack_require__(792);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__forecast__ = __webpack_require__(795);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(374);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -41,7 +41,7 @@ var ForecastPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 792:
+/***/ 795:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -113,7 +113,7 @@ var ForecastPage = /** @class */ (function () {
         });
         return dates;
     };
-    ForecastPage.prototype.ionViewDidEnter = function () {
+    ForecastPage.prototype.ionViewWillEnter = function () {
         var _this = this;
         console.log('SEARCH');
         console.log(this.navParams.data);
@@ -140,7 +140,7 @@ var ForecastPage = /** @class */ (function () {
     };
     ForecastPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-forecast',template:/*ion-inline-start:"/Users/keology/Documents/catalyst-ui-new/src/pages/forecast/forecast.html"*/'<!--\n  Generated template for the ForecastPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>{{ (data.city) ? data.city.name : \'\'}} Forecast</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <search-bar></search-bar>\n\n  <temp-graph [data]="data.list"></temp-graph>\n\n  <ion-grid>\n    <ion-row offset-1>\n      <ion-col *ngFor="let day of getObjKeys(dates)" col-2>\n        <day-forecast [day]="dates[day]"></day-forecast>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n<!-- \n  <ul *ngIf="data.list">\n    <li *ngFor="let item of data.list">\n      {{item | json}}\n    </li>\n  </ul> -->\n</ion-content>'/*ion-inline-end:"/Users/keology/Documents/catalyst-ui-new/src/pages/forecast/forecast.html"*/,
+            selector: 'page-forecast',template:/*ion-inline-start:"/Users/keology/Documents/git/weather-ui/src/pages/forecast/forecast.html"*/'<!--\n  ForecastPage to dynamically load and display weather forecast\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>{{ (data.city) ? data.city.name : \'\'}} Forecast</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <search-bar></search-bar>\n\n  <temp-graph [data]="data.list"></temp-graph>\n\n  <ion-grid>\n    <ion-row offset-1>\n      <ion-col *ngFor="let day of getObjKeys(dates)" col-2>\n        <day-forecast [day]="dates[day]"></day-forecast>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n\n</ion-content>'/*ion-inline-end:"/Users/keology/Documents/git/weather-ui/src/pages/forecast/forecast.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_http_http__["a" /* HttpProvider */],
             __WEBPACK_IMPORTED_MODULE_4__providers_storage_storage__["a" /* StorageProvider */]])

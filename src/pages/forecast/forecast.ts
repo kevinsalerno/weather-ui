@@ -68,7 +68,7 @@ export class ForecastPage {
     return dates;
   }
 
-  ionViewDidEnter() {
+  ionViewWillEnter() {
     console.log('SEARCH');
     console.log(this.navParams.data);
 

@@ -39,7 +39,7 @@ webpackEmptyAsyncContext.id = 200;
 
 var map = {
 	"../pages/forecast/forecast.module": [
-		791,
+		794,
 		0
 	]
 };
@@ -84,7 +84,7 @@ var HomePage = /** @class */ (function () {
     }
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"/Users/keology/Documents/catalyst-ui-new/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Catalyst Weather Machine\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n  <p>Welcome to the Catalyst Weather machine! Enter a numeric zip code or city into the search box below to sample the weather.</p>\n\n  <search-bar></search-bar>\n  <!-- <ion-item>\n    <ion-label floating>\n      City/Zip\n    </ion-label>\n    <ion-input placeholder="Enter a city or zip" name="editSearch" [(ngModel)]="editSearch"></ion-input>\n  </ion-item>\n  <button ion-button (click)="search($event)">Search</button> -->\n\n</ion-content>'/*ion-inline-end:"/Users/keology/Documents/catalyst-ui-new/src/pages/home/home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"/Users/keology/Documents/git/weather-ui/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Catalyst Weather Machine\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n  <p>Welcome to the Catalyst Weather machine! Enter a numeric zip code or city into the search box below to sample the weather.</p>\n\n  <search-bar></search-bar>\n  \n</ion-content>\n\n  <!-- Moved this to a component. See SearchBarComponent -->\n\n  <!-- <ion-item>\n    <ion-label floating>\n      City/Zip\n    </ion-label>\n    <ion-input placeholder="Enter a city or zip" name="editSearch" [(ngModel)]="editSearch"></ion-input>\n  </ion-item>\n  <button ion-button (click)="search($event)">Search</button> -->\n'/*ion-inline-end:"/Users/keology/Documents/git/weather-ui/src/pages/home/home.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]])
     ], HomePage);
@@ -259,7 +259,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(57);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(367);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(370);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(790);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(793);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_home_home__ = __webpack_require__(371);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_storage_storage__ = __webpack_require__(373);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_http_http__ = __webpack_require__(372);
@@ -405,7 +405,7 @@ var SearchBarComponent = /** @class */ (function () {
     };
     SearchBarComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'search-bar',template:/*ion-inline-start:"/Users/keology/Documents/catalyst-ui-new/src/components/search-bar/search-bar.html"*/'<form>\n<ion-item>\n  <ion-label stacked for="editSearch">\n    City/Zip\n  </ion-label>\n  <ion-input placeholder="Enter a city or zip" name="editSearch" [(ngModel)]="editSearch"></ion-input>\n</ion-item>\n<button ion-button (click)="search($event)">Search</button>\n</form>'/*ion-inline-end:"/Users/keology/Documents/catalyst-ui-new/src/components/search-bar/search-bar.html"*/
+            selector: 'search-bar',template:/*ion-inline-start:"/Users/keology/Documents/git/weather-ui/src/components/search-bar/search-bar.html"*/'<form>\n<ion-item>\n  <ion-label stacked for="editSearch">\n    City/Zip\n  </ion-label>\n  <ion-input placeholder="Enter a city or zip" name="editSearch" [(ngModel)]="editSearch"></ion-input>\n</ion-item>\n<button ion-button (click)="search($event)">Search</button>\n</form>'/*ion-inline-end:"/Users/keology/Documents/git/weather-ui/src/components/search-bar/search-bar.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]])
     ], SearchBarComponent);
@@ -447,7 +447,7 @@ var DayForecastComponent = /** @class */ (function () {
     ], DayForecastComponent.prototype, "day", void 0);
     DayForecastComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'day-forecast',template:/*ion-inline-start:"/Users/keology/Documents/catalyst-ui-new/src/components/day-forecast/day-forecast.html"*/'<!-- Modular Day component to reuse for each daily forecast -->\n<h1>{{day[0].dt_txt | date:\'shortDate\'}}</h1>\n<ion-row *ngFor="let hour of day">\n    <hour-forecast [hour]="hour"></hour-forecast>\n</ion-row>'/*ion-inline-end:"/Users/keology/Documents/catalyst-ui-new/src/components/day-forecast/day-forecast.html"*/
+            selector: 'day-forecast',template:/*ion-inline-start:"/Users/keology/Documents/git/weather-ui/src/components/day-forecast/day-forecast.html"*/'<!-- Modular Day component to reuse for each daily forecast -->\n<h1>{{day[0].dt_txt | date:\'shortDate\'}}</h1>\n<ion-row *ngFor="let hour of day">\n    <hour-forecast [hour]="hour"></hour-forecast>\n</ion-row>'/*ion-inline-end:"/Users/keology/Documents/git/weather-ui/src/components/day-forecast/day-forecast.html"*/
         }),
         __metadata("design:paramtypes", [])
     ], DayForecastComponent);
@@ -508,7 +508,7 @@ var HourForecastComponent = /** @class */ (function () {
     ], HourForecastComponent.prototype, "hour", void 0);
     HourForecastComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'hour-forecast',template:/*ion-inline-start:"/Users/keology/Documents/catalyst-ui-new/src/components/hour-forecast/hour-forecast.html"*/'<!-- Generated template for the HourForecastComponent component -->\n<div *ngIf="hour.main">\n  <h4>{{ hour.dt_txt | date :\'shortTime\' }}</h4>\n  <h5><ion-icon name="{{icon}}"></ion-icon>{{ hour.weather[0].main }}</h5>\n  <h6>{{  hour.weather[0].description }}</h6>\n  <b>Temperate:</b> {{ hour.main.temp }}℉<br>\n  <b>Low:</b> {{ hour.main.temp_min }}℉<br>\n  <b>High:</b> {{ hour.main.temp_max }}℉<br>\n  <b>Humidity:</b> {{ hour.main.humidity }}%<br>\n  <b>Wind:</b> {{ hour.wind.speed }}mph<br>\n</div>'/*ion-inline-end:"/Users/keology/Documents/catalyst-ui-new/src/components/hour-forecast/hour-forecast.html"*/
+            selector: 'hour-forecast',template:/*ion-inline-start:"/Users/keology/Documents/git/weather-ui/src/components/hour-forecast/hour-forecast.html"*/'<!-- Generated template for the HourForecastComponent component -->\n<div *ngIf="hour.main">\n  <h4>{{ hour.dt_txt | date :\'shortTime\' }}</h4>\n  <h5><ion-icon name="{{icon}}"></ion-icon>{{ hour.weather[0].main }}</h5>\n  <h6>{{  hour.weather[0].description }}</h6>\n  <b>Temperate:</b> {{ hour.main.temp }}℉<br>\n  <b>Low:</b> {{ hour.main.temp_min }}℉<br>\n  <b>High:</b> {{ hour.main.temp_max }}℉<br>\n  <b>Humidity:</b> {{ hour.main.humidity }}%<br>\n  <b>Wind:</b> {{ hour.wind.speed }}mph<br>\n</div>'/*ion-inline-end:"/Users/keology/Documents/git/weather-ui/src/components/hour-forecast/hour-forecast.html"*/
         }),
         __metadata("design:paramtypes", [])
     ], HourForecastComponent);
@@ -526,6 +526,8 @@ var HourForecastComponent = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TempGraphComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_d3__ = __webpack_require__(433);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_uuid_v4__ = __webpack_require__(766);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_uuid_v4___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_uuid_v4__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -537,6 +539,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 /**
  * Generated class for the TempGraphComponent component.
  *
@@ -546,6 +549,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var TempGraphComponent = /** @class */ (function () {
     function TempGraphComponent() {
     }
+    TempGraphComponent.prototype.ngOnInit = function () {
+        this.random = __WEBPACK_IMPORTED_MODULE_2_uuid_v4__();
+        // Graph the graph SVG from dom
+        this.graph = __WEBPACK_IMPORTED_MODULE_1_d3__["g" /* select */]("#graph-" + this.random);
+    };
     TempGraphComponent.prototype.ngOnChanges = function (changes) {
         console.log(changes);
         console.log(this.data);
@@ -564,16 +572,8 @@ var TempGraphComponent = /** @class */ (function () {
         console.log(result);
         return result;
     };
-    TempGraphComponent.prototype.getLineData = function (data) {
-        var _this = this;
-        var result = data.map(function (d) {
-            return [_this.xRange(d.x), _this.yRange(d.y)];
-        });
-        console.log('result LINE DATA');
-        console.log(result);
-        return result;
-    };
     TempGraphComponent.prototype.prepGraph = function () {
+        this.graph = __WEBPACK_IMPORTED_MODULE_1_d3__["g" /* select */]("#graph-" + this.random);
         var WIDTH = window.innerWidth;
         var HEIGHT = window.innerHeight / 2;
         var MARGINS = {
@@ -602,13 +602,15 @@ var TempGraphComponent = /** @class */ (function () {
             .attr('class', 'y axis')
             .attr('transform', 'translate(' + (MARGINS.left) + ',0)')
             .call(this.yAxis);
-        var lineGen = __WEBPACK_IMPORTED_MODULE_1_d3__["c" /* line */]();
-        var pathString = lineGen([[this.xRange(3), this.yRange(20)], [this.xRange(16), this.yRange(23)], [this.xRange(27), this.yRange(43)]]);
-        this.graph.append('svg:path')
-            .attr('d', pathString)
-            .attr('stroke', 'red')
-            .attr('stroke-width', 4)
-            .attr('fill', 'none');
+    };
+    TempGraphComponent.prototype.getLineData = function (data) {
+        var _this = this;
+        var result = data.map(function (d) {
+            return [_this.xRange(d.x), _this.yRange(d.y)];
+        });
+        console.log('result LINE DATA');
+        console.log(result);
+        return result;
     };
     TempGraphComponent.prototype.drawGraphLines = function () {
         var lineGen = __WEBPACK_IMPORTED_MODULE_1_d3__["c" /* line */]();
@@ -619,80 +621,13 @@ var TempGraphComponent = /** @class */ (function () {
             .attr('stroke-width', 4)
             .attr('fill', 'none');
     };
-    TempGraphComponent.prototype.ngOnInit = function () {
-        this.graph = __WEBPACK_IMPORTED_MODULE_1_d3__["g" /* select */]('#graph');
-        // var lineData = [{
-        //   x: 1,
-        //   y: 5
-        // }, {
-        //   x: 20,
-        //   y: 20
-        // }, {
-        //   x: 40,
-        //   y: 10
-        // }, {
-        //   x: 60,
-        //   y: 40
-        // }, {
-        //   x: 80,
-        //   y: 5
-        // }, {
-        //   x: 100,
-        //   y: 60
-        // }];
-        // var WIDTH = window.innerWidth;
-        // var HEIGHT = window.innerHeight / 2;
-        // var MARGINS = {
-        //   top: 50,
-        //   right: 20,
-        //   bottom: 20,
-        //   left: 50
-        // };
-        // this.xRange = d3.scaleLinear().range([MARGINS.left, WIDTH - MARGINS.right]).domain([d3.min(lineData, function (d) {
-        //   return d.x;
-        // }), d3.max(lineData, function (d) {
-        //   return d.x;
-        // })]);
-        // this.yRange = d3.scaleLinear().range([HEIGHT - MARGINS.top, MARGINS.bottom]).domain([d3.min(lineData, function (d) {
-        //   return d.y;
-        // }), d3.max(lineData, function (d) {
-        //   return d.y;
-        // })]);
-        // this.xAxis = d3.axisBottom(this.xRange).tickSize(10).tickFormat((d: any) => { console.log(d); return d.x; });
-        // this.yAxis = d3.axisLeft(this.yRange);
-        // this.graph.append('svg:g')
-        //   .attr('class', 'x axis')
-        //   .attr('transform', 'translate(0,' + (HEIGHT - MARGINS.bottom) + ')')
-        //   .call(this.xAxis);
-        //   this.graph.append('svg:g')
-        //   .attr('class', 'y axis')
-        //   .attr('transform', 'translate(' + (MARGINS.left) + ',0)')
-        //   .call(this.yAxis);
-        //   let lineGen = d3.line();
-        //   let pathString = lineGen([[this.xRange(3), this.yRange(20)], [this.xRange(16), this.yRange(23)], [this.xRange(27), this.yRange(43)]]);
-        //   this.graph.append('svg:path')
-        //   .attr('d', pathString)
-        //   .attr('stroke', 'red')
-        //   .attr('stroke-width', 4)
-        //   .attr('fill', 'none');
-        // .interpolate('linear');
-    };
-    TempGraphComponent.prototype.lineFunc = function (d) {
-        __WEBPACK_IMPORTED_MODULE_1_d3__["c" /* line */]()
-            .x(function (d) {
-            return d.x; // this.xRange(d.x);
-        })
-            .y(function (d) {
-            return d.y; // this.yRange(d.y);
-        });
-    };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
         __metadata("design:type", Object)
     ], TempGraphComponent.prototype, "data", void 0);
     TempGraphComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'temp-graph',template:/*ion-inline-start:"/Users/keology/Documents/catalyst-ui-new/src/components/temp-graph/temp-graph.html"*/'<!-- Generated template for the TempGraphComponent component -->\n<svg id="graph" width="90%" height="60%"></svg>\n'/*ion-inline-end:"/Users/keology/Documents/catalyst-ui-new/src/components/temp-graph/temp-graph.html"*/
+            selector: 'temp-graph',template:/*ion-inline-start:"/Users/keology/Documents/git/weather-ui/src/components/temp-graph/temp-graph.html"*/'<!-- D3 SVG Graph Container -->\n<svg id="graph-{{random}}" width="90%" height="60%"></svg>\n\n<!-- id="graph-{{$scope.id}}" -->'/*ion-inline-end:"/Users/keology/Documents/git/weather-ui/src/components/temp-graph/temp-graph.html"*/
         }),
         __metadata("design:paramtypes", [])
     ], TempGraphComponent);
@@ -703,7 +638,7 @@ var TempGraphComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 790:
+/***/ 793:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -738,7 +673,7 @@ var MyApp = /** @class */ (function () {
         });
     }
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/keology/Documents/catalyst-ui-new/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/Users/keology/Documents/catalyst-ui-new/src/app/app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/keology/Documents/git/weather-ui/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/Users/keology/Documents/git/weather-ui/src/app/app.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
     ], MyApp);
