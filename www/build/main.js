@@ -497,6 +497,8 @@ var HourForecastComponent = /** @class */ (function () {
                     this.icon = 'rainy';
                     break;
                 case 'clear':
+                    this.icon = 'sunny';
+                    break;
                 default:
                     this.icon = 'cloud';
                     break;
@@ -509,7 +511,7 @@ var HourForecastComponent = /** @class */ (function () {
     ], HourForecastComponent.prototype, "hour", void 0);
     HourForecastComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'hour-forecast',template:/*ion-inline-start:"/Users/keology/Documents/git/weather-ui/src/components/hour-forecast/hour-forecast.html"*/'<!-- Generated template for the HourForecastComponent component -->\n<div *ngIf="hour.main">\n  <h4>{{ hour.dt_txt | date :\'shortTime\' }}</h4>\n  <h5><ion-icon name="{{icon}}"></ion-icon>{{ hour.weather[0].main }}</h5>\n  <h6>{{  hour.weather[0].description }}</h6>\n  <b>Temperate:</b> {{ hour.main.temp }}℉<br>\n  <b>Low:</b> {{ hour.main.temp_min }}℉<br>\n  <b>High:</b> {{ hour.main.temp_max }}℉<br>\n  <b>Humidity:</b> {{ hour.main.humidity }}%<br>\n  <b>Wind:</b> {{ hour.wind.speed }}mph<br>\n</div>'/*ion-inline-end:"/Users/keology/Documents/git/weather-ui/src/components/hour-forecast/hour-forecast.html"*/
+            selector: 'hour-forecast',template:/*ion-inline-start:"/Users/keology/Documents/git/weather-ui/src/components/hour-forecast/hour-forecast.html"*/'<!-- HourForecast component for displaying hourly weather data -->\n<div *ngIf="hour.main">\n  <h4>{{ hour.dt_txt | date :\'shortTime\' }}</h4>\n  <h5><ion-icon name="{{icon}}"></ion-icon> {{ hour.weather[0].main }}</h5>\n  <h6>{{  hour.weather[0].description }}</h6>\n  <b>Temperate:</b> {{ hour.main.temp }}℉<br>\n  <b>Low:</b> {{ hour.main.temp_min }}℉<br>\n  <b>High:</b> {{ hour.main.temp_max }}℉<br>\n  <b>Humidity:</b> {{ hour.main.humidity }}%<br>\n  <b>Wind:</b> {{ hour.wind.speed }}mph<br>\n</div>'/*ion-inline-end:"/Users/keology/Documents/git/weather-ui/src/components/hour-forecast/hour-forecast.html"*/
         }),
         __metadata("design:paramtypes", [])
     ], HourForecastComponent);
@@ -696,7 +698,7 @@ var MyApp = /** @class */ (function () {
 /***/ 794:
 /***/ (function(module, exports) {
 
-module.exports = {"name":"weather-ui","version":"1.0.1","author":"Kevin Salerno","homepage":"https://linkedin.com/in/kevinsalerno/","private":true,"scripts":{"start":"ionic-app-scripts serve","clean":"ionic-app-scripts clean","build":"ionic-app-scripts build","lint":"ionic-app-scripts lint"},"dependencies":{"@angular/animations":"5.2.11","@angular/common":"5.2.11","@angular/compiler":"5.2.11","@angular/compiler-cli":"5.2.11","@angular/core":"5.2.11","@angular/forms":"5.2.11","@angular/http":"5.2.11","@angular/platform-browser":"5.2.11","@angular/platform-browser-dynamic":"5.2.11","@ionic-native/core":"~4.11.0","@ionic-native/splash-screen":"~4.11.0","@ionic-native/status-bar":"~4.11.0","@ionic/storage":"2.1.3","d3":"^5.5.0","ionic-angular":"3.9.2","ionicons":"3.0.0","rxjs":"5.5.11","sw-toolbox":"3.6.0","uuid":"^3.3.2","zone.js":"0.8.26"},"devDependencies":{"@ionic/app-scripts":"3.1.11","@types/d3":"^5.0.0","typescript":"~2.6.2"},"description":"A sample Weather UI project to demonstrate graphing and API utilization"}
+module.exports = {"name":"weather-ui","version":"1.0.2","author":"Kevin Salerno","homepage":"https://linkedin.com/in/kevinsalerno/","private":true,"scripts":{"start":"ionic-app-scripts serve","clean":"ionic-app-scripts clean","build":"ionic-app-scripts build","lint":"ionic-app-scripts lint"},"dependencies":{"@angular/animations":"5.2.11","@angular/common":"5.2.11","@angular/compiler":"5.2.11","@angular/compiler-cli":"5.2.11","@angular/core":"5.2.11","@angular/forms":"5.2.11","@angular/http":"5.2.11","@angular/platform-browser":"5.2.11","@angular/platform-browser-dynamic":"5.2.11","@ionic-native/core":"~4.11.0","@ionic-native/splash-screen":"~4.11.0","@ionic-native/status-bar":"~4.11.0","@ionic/storage":"2.1.3","d3":"^5.5.0","ionic-angular":"3.9.2","ionicons":"3.0.0","rxjs":"5.5.11","sw-toolbox":"3.6.0","uuid":"^3.3.2","zone.js":"0.8.26"},"devDependencies":{"@ionic/app-scripts":"3.1.11","@types/d3":"^5.0.0","typescript":"~2.6.2"},"description":"A sample Weather UI project to demonstrate graphing and API utilization"}
 
 /***/ })
 

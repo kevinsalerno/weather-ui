@@ -34,6 +34,8 @@ export class HourForecastComponent {
         this.icon = 'rainy';
         break;
         case 'clear':
+        this.icon = 'sunny';
+        break;
         default:
         this.icon = 'cloud';
         break;

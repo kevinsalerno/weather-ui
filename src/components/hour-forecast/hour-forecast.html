@@ -1,7 +1,7 @@
-<!-- Generated template for the HourForecastComponent component -->
+<!-- HourForecast component for displaying hourly weather data -->
 <div *ngIf="hour.main">
   <h4>{{ hour.dt_txt | date :'shortTime' }}</h4>
-  <h5><ion-icon name="{{icon}}"></ion-icon>{{ hour.weather[0].main }}</h5>
+  <h5><ion-icon name="{{icon}}"></ion-icon> {{ hour.weather[0].main }}</h5>
   <h6>{{  hour.weather[0].description }}</h6>
   <b>Temperate:</b> {{ hour.main.temp }}℉<br>
   <b>Low:</b> {{ hour.main.temp_min }}℉<br>
